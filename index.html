@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Lock &amp; Focus — Mindful App Blocker</title>
+    <meta name="description" content="Stop mindless scrolling. Auto Lock &amp; Focus uses smart defaults, auto-reverting extensions, and breathing pauses to keep you off autopilot.">
+    <meta property="og:title" content="Auto Lock &amp; Focus — Mindful App Blocker">
+    <meta property="og:description" content="Stop mindless scrolling. Auto Lock &amp; Focus uses smart defaults, auto-reverting extensions, and breathing pauses to keep you off autopilot.">
+    <meta property="og:image" content="assets/feature_graphic.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="assets/feature_graphic.png">
+    
+    <!-- Google Fonts: Plus Jakarta Sans & Instrument Serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Ambient Background Glows -->
+    <div class="glow-sphere glow-sphere-1" aria-hidden="true"></div>
+    <div class="glow-sphere glow-sphere-2" aria-hidden="true"></div>
+    <div class="glow-sphere glow-sphere-3" aria-hidden="true"></div>
+
+    <!-- Main Container -->
+    <main class="page-container">
+
+        <!-- 1. HERO SECTION -->
+        <section class="hero-section">
+            <div class="hero-content load-fade-up" style="--delay: 0.1s;">
+                <div class="badge-pill">
+                    <span class="badge-dot pulse-dot"></span>
+                    <span>100% Offline &amp; Private • No Accounts</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    Stop mindless scrolling.<br>
+                    <span class="serif-italic">Stay mindful.</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Most blockers fail because quitting takes one tap. 
+                    <strong>Auto Lock &amp; Focus</strong> adds just enough friction—auto-reverting limits and short breathing pauses—to snap you out of autopilot.
+                </p>
+                
+                <div class="hero-cta-group">
+                    <a href="https://google.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="hero-download-btn">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M3 20.5v-17c0-.55.45-1 1-1h11c.55 0 1 .45 1 1v17c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1zm2-16v15h9v-15H5zm12 2h2v13h-2V6.5zM7 6h5v2H7V6zm0 4h5v2H7v-2z"/>
+                        </svg>
+                        Download App
+                    </a>
+                    <a href="#how-different" class="btn btn-secondary">
+                        See Why It Works
+                        <svg class="arrow-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M14.707 10.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 12.586V4a1 1 0 012 0v8.586l2.293-2.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Phone Mockup Visual -->
+            <div class="hero-visual-wrapper load-fade-up" style="--delay: 0.25s;">
+                <div class="hero-phone-card">
+                    <img src="assets/LockScreen-cropped.png" alt="Auto Lock and Focus Lock Screen Interface" class="phone-mockup-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. COMPARISON SECTION -->
+        <section class="comparison-section" id="how-different">
+            <div class="section-header" data-scroll-animate>
+                <div class="section-tag">THE WILLPOWER TRAP</div>
+                <h2 class="section-title">
+                    Why most blockers fail.<br>
+                    <span class="serif-italic">And why friction works.</span>
+                </h2>
+                <p class="section-description">
+                    When your time is up, willpower shouldn't be your only defense.
+                </p>
+            </div>
+
+            <div class="showdown-grid">
+
+                <!-- 1. SAMSUNG DIGITAL WELLBEING -->
+                <div class="showdown-card flaw-card" data-scroll-animate>
+                    <div class="card-pill tag-danger">
+                        <span>⚠️ Samsung Digital Wellbeing</span>
+                    </div>
+                    <p class="showdown-body">
+                        One flick spins the limit to 23 hours—useless when your willpower drops.
+                    </p>
+                    <div class="screenshot-showcase">
+                        <img src="assets/DigitlWellbeing-easy-wheel.jpg" alt="Samsung Digital Wellbeing timer wheel set to 23 hours" class="showcase-img showcase-img-center" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- 2. SWITCHLY & LOCK -->
+                <div class="showdown-card flaw-card" data-scroll-animate>
+                    <div class="card-pill tag-danger">
+                        <span>🚪 Switchly &amp; Lock</span>
+                    </div>
+                    <p class="showdown-body">
+                        A giant "Disable" button sits right on the home screen. One tap and you're back to scrolling.
+                    </p>
+                    <div class="screenshot-showcase">
+                        <img src="assets/Switchly-green-disable-btn.png" alt="Switchly with giant Disable button on screen" class="showcase-img showcase-img-top" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- 3. AUTO LOCK & FOCUS -->
+                <div class="showdown-card solution-card highlight-card" data-scroll-animate>
+                    <div class="card-pill tag-success">
+                        <span>✨ Auto Lock &amp; Focus</span>
+                    </div>
+                    <p class="showdown-body">
+                        No kill switch. Quick +2m extensions re-lock automatically, and breathing pauses break the urge.
+                    </p>
+                    <div class="screenshot-showcase">
+                        <img src="assets/LockScreen-cropped.png" alt="Auto Lock Be Present mindful lock screen" class="showcase-img showcase-img-top" loading="lazy">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 3. MERGED FEATURES SECTION: SMART DEFAULTS, AUTO-REVERT & MINDFUL PAUSES -->
+        <section class="feature-detail-section" id="features">
+            <div class="feature-split-layout">
+                <div class="feature-split-text" data-scroll-animate>
+                    <div class="section-tag">HOW IT WORKS</div>
+                    <h2 class="section-title">
+                        Smart defaults.<br>
+                        <span class="serif-italic">Zero setup.</span>
+                    </h2>
+                    <p class="feature-body-p">
+                        Protection starts the moment you install—no complex rules to configure.
+                    </p>
+
+                    <div class="merged-features-list">
+                        <div class="merged-feature-item">
+                            <div class="merged-feature-icon">⏱️</div>
+                            <div>
+                                <h3 class="merged-feature-title">2-Hour Cap &amp; Sleep Guard</h3>
+                                <p class="merged-feature-desc">
+                                    Social and entertainment apps cap at 2 hours a day and lock from midnight to 9 AM. Calls and alarms always work.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="merged-feature-item">
+                            <div class="merged-feature-icon">⚡</div>
+                            <div>
+                                <h3 class="merged-feature-title">+2m Auto-Locking Extensions</h3>
+                                <p class="merged-feature-desc">
+                                    Actually need to check something? Grab 2 minutes. It locks itself right back when time is up.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="merged-feature-item">
+                            <div class="merged-feature-icon">🧘</div>
+                            <div>
+                                <h3 class="merged-feature-title">30-Second Breathing Breaks</h3>
+                                <p class="merged-feature-desc">
+                                    Long scrolling sessions trigger a calm 30-second pause—just enough to break the dopamine loop.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-split-visual" data-scroll-animate>
+                    <div class="phone-mockup-frame">
+                        <img src="assets/MindfulBreak-cropped.png" alt="Mindful pause 30-second breathing screen" class="phone-mockup-img" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. FINAL DOWNLOAD CTA -->
+        <section class="cta-section">
+            <div class="cta-card" data-scroll-animate>
+                <div class="cta-glow" aria-hidden="true"></div>
+                <h2 class="cta-title">
+                    Take back your time.<br>
+                    <span class="serif-italic">Without the battle.</span>
+                </h2>
+                
+                <div class="cta-btn-wrapper">
+                    <a href="https://google.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large" id="footer-download-btn">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M3 20.5v-17c0-.55.45-1 1-1h11c.55 0 1 .45 1 1v17c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1zm2-16v15h9v-15H5zm12 2h2v13h-2V6.5zM7 6h5v2H7V6zm0 4h5v2H7v-2z"/>
+                        </svg>
+                        Download Auto Lock &amp; Focus
+                    </a>
+                </div>
+                
+                <div class="cta-perks-row">
+                    <span>✓ Zero Setup</span>
+                    <span>✓ 100% Offline</span>
+                    <span>✓ No Account</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER WITH 2 LEGAL LINKS -->
+    <footer class="simple-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="brand-logo">Auto Lock &amp; Focus</span>
+                <span class="footer-privacy-tag">🔒 100% Offline &amp; Private</span>
+            </div>
+            <div class="footer-nav">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms &amp; Conditions</a>
+            </div>
+            <div class="footer-meta">
+                <span>&copy; 2026 Auto Lock &amp; Focus. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
