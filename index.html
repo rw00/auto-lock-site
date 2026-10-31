@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Lock & Focus — Stay mindful!</title>
+    <meta name="description" content="Stop mindlessly using your phone. Auto Lock & Focus brings smart defaults, auto-reverting temporary extensions, and mindful friction to help you stay mindful.">
+    
+    <!-- Google Fonts: Plus Jakarta Sans & Instrument Serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Ambient Background Glows -->
+    <div class="glow-sphere glow-sphere-1"></div>
+    <div class="glow-sphere glow-sphere-2"></div>
+    <div class="glow-sphere glow-sphere-3"></div>
+
+    <!-- MAIN SINGLE PAGE CONTAINER (NO NAVBAR) -->
+    <main class="page-container">
+
+        <!-- 1. HERO SECTION -->
+        <section class="hero-section">
+            <div class="hero-content load-fade-up" style="--delay: 0.1s;">
+                <div class="badge-pill">
+                    <span class="badge-dot pulse-dot"></span>
+                    <span>Auto Lock &amp; Focus • 100% Offline &amp; Private</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    Stop mindlessly using your phone.<br>
+                    <span class="serif-italic">Stay Mindful!</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    There are plenty of apps to limit screen time. But when distractions hit, they make giving up effortless. 
+                    <strong>Auto Lock &amp; Focus</strong> uses smart defaults, auto-reverts temporary extensions, and adds mindful friction so you can focus on real life.
+                </p>
+                
+                <div class="hero-cta-group">
+                    <a href="https://google.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="hero-download-btn">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M3 20.5v-17c0-.55.45-1 1-1h11c.55 0 1 .45 1 1v17c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1zm2-16v15h9v-15H5zm12 2h2v13h-2V6.5zM7 6h5v2H7V6zm0 4h5v2H7v-2z"/>
+                        </svg>
+                        Download App
+                    </a>
+                    <a href="#how-different" class="btn btn-secondary">
+                        How is it different?
+                        <svg class="arrow-icon" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M14.707 10.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 12.586V4a1 1 0 012 0v8.586l2.293-2.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="hero-specs">
+                    <span>Android 8.0+</span>
+                    <span class="spec-dot">•</span>
+                    <span>No Account Required</span>
+                    <span class="spec-dot">•</span>
+                    <span>$29 / 29€ Lifetime • 100% Offline</span>
+                </div>
+            </div>
+
+            <!-- Hero Phone Mockup Visual -->
+            <div class="hero-visual-wrapper load-fade-up" style="--delay: 0.25s;">
+                <div class="hero-phone-card rotated-left">
+                    <img src="assets/hero_mockup.jpg" alt="Auto Lock and Focus Interface" class="phone-mockup-img">
+                    
+                    <div class="floating-badge badge-top-right">
+                        <div class="badge-icon green-icon">⚡</div>
+                        <div>
+                            <div class="badge-label">Limit Auto-Reverted</div>
+                            <div class="badge-val">Cap restored automatically</div>
+                        </div>
+                    </div>
+
+                    <div class="floating-badge badge-bottom-left">
+                        <div class="badge-icon indigo-icon">🌙</div>
+                        <div>
+                            <div class="badge-label">Sleep Guard</div>
+                            <div class="badge-val">Midnight – 9 AM Locked</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. THE SHOWDOWN: HOW IS AUTO LOCK & FOCUS DIFFERENT? -->
+        <section class="comparison-section" id="how-different">
+            <div class="section-header center" data-scroll-animate>
+                <div class="section-tag">THE WILLPOWER TRAP</div>
+                <h2 class="section-title">
+                    There are plenty of screen time apps.<br>
+                    <span class="serif-italic">So how is Auto Lock &amp; Focus different?</span>
+                </h2>
+                <p class="section-description center-text">
+                    Existing apps fail because they make giving up effortless. See what happens when you hit a limit:
+                </p>
+            </div>
+
+            <!-- 3-Column Showdown Grid -->
+            <div class="showdown-grid">
+
+                <!-- 1. SAMSUNG DIGITAL WELLBEING (VERTICAL DUAL WHEELS) -->
+                <div class="showdown-card flaw-card" data-scroll-animate>
+                    <div class="card-pill tag-danger">
+                        <span>⚠️ Samsung Digital Wellbeing</span>
+                    </div>
+                    <p class="showdown-body">
+                        Allows you to increase allowed screen time as easily as turning a wheel — <strong>literally spinning the vertical hours wheel to 3 or even 23 hours in two seconds.</strong>
+                    </p>
+
+                    <!-- Interactive Samsung 2-Wheel Vertical Drum Picker -->
+                    <div class="samsung-picker-widget">
+                        <div class="picker-title-bar">
+                            <span>Set app timer</span>
+                            <span class="picker-quick-flicks">
+                                <button type="button" class="btn-flick" id="flick-3h">Flick to 3h</button>
+                                <button type="button" class="btn-flick danger" id="flick-23h">Flick to 23h</button>
+                            </span>
+                        </div>
+
+                        <div class="samsung-drums-wrapper">
+                            <div class="drum-highlight-bar"></div>
+                            
+                            <!-- Hours Wheel (Vertical Drum) -->
+                            <div class="drum-column" id="hours-drum">
+                                <div class="drum-label">Hours</div>
+                                <div class="drum-wheel-items" id="hours-items">
+                                    <!-- Populated dynamically via JS: 0 to 23 -->
+                                </div>
+                            </div>
+
+                            <div class="drum-separator">:</div>
+
+                            <!-- Minutes Wheel (Vertical Drum) -->
+                            <div class="drum-column" id="minutes-drum">
+                                <div class="drum-label">Minutes</div>
+                                <div class="drum-wheel-items" id="minutes-items">
+                                    <!-- Populated dynamically via JS: 00 to 55 -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="picker-feedback-bar danger-feedback" id="picker-feedback">
+                            Scroll or click a flick button to test the wheel.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. SWITCHLY & LOCK (GIANT DISABLE BUTTON) -->
+                <div class="showdown-card flaw-card" data-scroll-animate>
+                    <div class="card-pill tag-danger">
+                        <span>🚪 Switchly &amp; Lock</span>
+                    </div>
+                    <p class="showdown-body">
+                        They place a <strong>giant Disable button</strong> right in front of you. When you're trying to fight distractions, one tap turns off all friction and ruins your focus.
+                    </p>
+
+                    <!-- Interactive Giant Button Demo -->
+                    <div class="giant-disable-widget">
+                        <div class="giant-btn-label">Temptation Demo:</div>
+                        <button type="button" id="demo-disable-btn" class="mock-giant-disable-btn">
+                            DISABLE ALL LIMITS
+                        </button>
+                        <div class="picker-feedback-bar danger-feedback" id="disable-feedback">
+                            Click to see how easy it is to surrender.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. AUTO LOCK & FOCUS (THE SOLUTION) -->
+                <div class="showdown-card solution-card highlight-card" data-scroll-animate>
+                    <div class="card-pill tag-success">
+                        <span>✨ Auto Lock &amp; Focus</span>
+                    </div>
+                    <p class="showdown-body">
+                        <strong>No giant disable buttons. No endless wheel spinning.</strong> Mindful friction protects you from momentary impulses.
+                    </p>
+
+                    <div class="solution-perks-list">
+                        <div class="perk-row">
+                            <span class="perk-icon">🛡️</span>
+                            <span><strong>Smart Defaults:</strong> 2h max cap &amp; midnight–9am night lock.</span>
+                        </div>
+                        <div class="perk-row">
+                            <span class="perk-icon">⏱️</span>
+                            <span><strong>Auto-Revert:</strong> Extensions temporarily unlock, then auto-re-lock.</span>
+                        </div>
+                        <div class="perk-row">
+                            <span class="perk-icon">🌿</span>
+                            <span><strong>Mindful Rest:</strong> Gentle breathing pauses stop doomscrolling.</span>
+                        </div>
+                        <div class="perk-row">
+                            <span class="perk-icon">🔒</span>
+                            <span><strong>Lock Checkpoint:</strong> Makes you wonder if you really need the phone.</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 3. DEFAULT CONFIG THAT FOLLOWS BEST PRACTICES (SPREAD OUT DATA GRAPHS 1 & 2) -->
+        <section class="feature-detail-section" id="smart-defaults">
+            <div class="section-header" data-scroll-animate>
+                <div class="section-tag">OUT OF THE BOX</div>
+                <h2 class="section-title">
+                    Default config that follows best practices.
+                </h2>
+                <p class="section-description">
+                    Social media apps are classified as distracting with strict limits by default. Ready on day one with zero setup required.
+                </p>
+            </div>
+
+            <div class="cards-duo">
+
+                <!-- CARD 1: 2-HOUR MAX CEILING + SPREAD OUT DATA GRAPH 1 -->
+                <div class="dual-feature-card" data-scroll-animate>
+                    <div class="dual-feature-header">
+                        <h3 class="dual-title">Max 2 Hours Daily Screen Time</h3>
+                        <p class="dual-desc">
+                            Strict 2-hour daily ceiling across distracting apps. Keeps your daily phone use healthy without manual rules.
+                        </p>
+                    </div>
+
+                    <!-- SPREAD-OUT DATA GRAPH 1 (93%) -->
+                    <div class="embedded-stat-box">
+                        <div class="chart-box">
+                            <canvas id="chart-stat-93" width="130" height="130"></canvas>
+                            <div class="chart-center-val" id="val-93">0%</div>
+                        </div>
+                        <div class="embedded-stat-content">
+                            <div class="stat-highlight-tag">SURVEY OF 600+ PEOPLE</div>
+                            <div class="stat-quote">
+                                <strong>93% of adults</strong> agree they shouldn't use their phone for more than 2 hours a day.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 2: MIDNIGHT TO 9 AM SLEEP LOCK + SPREAD OUT DATA GRAPH 2 -->
+                <div class="dual-feature-card" data-scroll-animate>
+                    <div class="dual-feature-header">
+                        <h3 class="dual-title">Auto-Lock: Midnight to 9:00 AM</h3>
+                        <p class="dual-desc">
+                            Auto-locks distracting apps every night. <em>You definitely don't need to use distracting apps at this hour — you should be sleeping!</em>
+                        </p>
+                    </div>
+
+                    <!-- SPREAD-OUT DATA GRAPH 2 (81%) -->
+                    <div class="embedded-stat-box">
+                        <div class="chart-box">
+                            <canvas id="chart-stat-81" width="130" height="130"></canvas>
+                            <div class="chart-center-val" id="val-81">0%</div>
+                        </div>
+                        <div class="embedded-stat-content">
+                            <div class="stat-highlight-tag">SURVEY OF 600+ PEOPLE</div>
+                            <div class="stat-quote">
+                                <strong>81% of adults</strong> agree they shouldn't use their phone at night for at least 9 consecutive hours.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 4. AUTO-REVERTING EXTENSIONS (SPREAD OUT DATA GRAPH 3) -->
+        <section class="feature-detail-section" id="auto-revert">
+            <div class="feature-split-layout">
+                <div class="feature-split-text" data-scroll-animate>
+                    <div class="section-tag">TEMPORARY EXTENSIONS</div>
+                    <h2 class="section-title">
+                        Extend when you need to.<br>
+                        <span class="serif-italic">It auto-reverts and re-locks.</span>
+                    </h2>
+                    <p class="feature-body-p">
+                        Sometimes we really need to extend allowed screen time. Auto Lock &amp; Focus lets you do that — <strong>but it auto-reverts and re-locks the apps after some time</strong> so your limits never creep upward.
+                    </p>
+
+                    <!-- SPREAD-OUT DATA GRAPH 3 (86%) -->
+                    <div class="embedded-stat-box compact">
+                        <div class="chart-box">
+                            <canvas id="chart-stat-86" width="130" height="130"></canvas>
+                            <div class="chart-center-val" id="val-86">0%</div>
+                        </div>
+                        <div class="embedded-stat-content">
+                            <div class="stat-highlight-tag">SURVEY OF 600+ PEOPLE</div>
+                            <div class="stat-quote">
+                                <strong>86% of adults</strong> state they urgently need an automatic way to revert temporary time limit extensions.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mockup with Live Countdown Revert Timer -->
+                <div class="feature-split-visual" data-scroll-animate>
+                    <div class="phone-mockup-frame rotated-right">
+                        <img src="assets/auto_revert_mockup.jpg" alt="Temporary Extension Auto-Reverting" class="phone-mockup-img">
+                        
+                        <div class="interactive-timer-pill">
+                            <div class="pill-top-row">
+                                <span class="pill-status-dot pulse-dot"></span>
+                                <span class="pill-title">Temporary +2m Extension</span>
+                            </div>
+                            <div class="pill-timer" id="revert-live-timer">01:59 remaining</div>
+                            <div class="pill-progress-bar">
+                                <div class="pill-progress-fill" id="revert-progress-bar"></div>
+                            </div>
+                            <div class="pill-footer-note">Auto-reverts and re-locks automatically</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. MINDFUL REST & BREAKS (PUNCHY & MINIMAL) -->
+        <section class="feature-detail-section" id="mindful-breaks">
+            <div class="feature-split-layout reversed">
+                
+                <div class="feature-split-visual" data-scroll-animate>
+                    <div class="phone-mockup-frame rotated-left">
+                        <img src="assets/mindful_mockup.jpg" alt="Mindful pause breathing screen" class="phone-mockup-img">
+                        
+                        <div class="interactive-breathing-card">
+                            <div class="breathing-guide-title">Mindful Pause</div>
+                            <div class="breathing-ring-wrapper">
+                                <div class="breathing-ring-outer" id="breathing-ring"></div>
+                                <div class="breathing-ring-inner">
+                                    <span class="breathing-instruction" id="breathing-text">Inhale...</span>
+                                </div>
+                            </div>
+                            <div class="breathing-controls">
+                                <button type="button" class="btn btn-xs btn-outline" id="toggle-breathing-btn">Pause</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-split-text" data-scroll-animate>
+                    <div class="section-tag">ANTI-DOOMSCROLLING</div>
+                    <h2 class="section-title">
+                        Reminds you to rest and take a break.
+                    </h2>
+                    <p class="feature-body-p">
+                        Continuous screen time triggers gentle breathing pauses. This allows you to reflect, break the dopamine trance, and stop doomscrolling in its tracks.
+                    </p>
+                    <div class="reflection-mini-box">
+                        <span class="reflection-icon">🧘</span>
+                        <span>A brief pause gives you space to choose presence over scrolling.</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 6. LOCK SCREEN CHECKPOINT (PUNCHY & MINIMAL) -->
+        <section class="feature-detail-section" id="lock-checkpoint">
+            <div class="checkpoint-hero-card" data-scroll-animate>
+                <div class="checkpoint-text-side">
+                    <div class="section-tag">FRICTION AT THE GATE</div>
+                    <h2 class="section-title">
+                        Stops you at the lock screen.
+                    </h2>
+                    <p class="feature-body-p">
+                        Makes you wonder if you really need to use the phone before unconscious muscle memory unlocks the screen.
+                    </p>
+                    <div class="reflection-mini-box">
+                        <span class="reflection-icon">🔒</span>
+                        <span>Replaces automatic twitch pickups with intentional awareness.</span>
+                    </div>
+                </div>
+
+                <!-- Interactive Lock Screen Simulator Frame -->
+                <div class="checkpoint-visual-side">
+                    <div class="interactive-lockscreen-frame">
+                        <div class="lockscreen-status-bar">
+                            <span class="lock-clock" id="live-phone-clock">10:42 PM</span>
+                            <div class="lock-status-icons">
+                                <span>5G</span>
+                                <span>🔋 92%</span>
+                            </div>
+                        </div>
+
+                        <div class="lockscreen-body">
+                            <div class="lock-icon-wrap">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                </svg>
+                            </div>
+
+                            <div class="lockscreen-prompt-title">Mindful Checkpoint</div>
+                            <div class="lockscreen-prompt-sub">Do you really need to use your phone right now?</div>
+
+                            <div class="lockscreen-actions">
+                                <button type="button" class="lock-action-btn be-present-btn" id="lock-be-present-btn">
+                                    🌿 Put Phone Down (Stay Mindful)
+                                </button>
+                                <button type="button" class="lock-action-btn quick-task-btn" id="lock-quick-task-btn">
+                                    ⏱️ Quick 1-Min Task
+                                </button>
+                            </div>
+
+                            <div class="lockscreen-result-msg" id="lock-result-msg">
+                                Tap an option to see mindful friction in action.
+                            </div>
+                        </div>
+
+                        <div class="lockscreen-home-indicator"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. FINAL DOWNLOAD CTA -->
+        <section class="cta-section">
+            <div class="cta-card" data-scroll-animate>
+                <div class="cta-glow"></div>
+                <h2 class="cta-title">
+                    Stop mindlessly using your phone.<br>
+                    <span class="serif-italic">Stay Mindful!</span>
+                </h2>
+                
+                <div class="cta-btn-wrapper">
+                    <a href="https://google.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large" id="footer-download-btn">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M3 20.5v-17c0-.55.45-1 1-1h11c.55 0 1 .45 1 1v17c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1zm2-16v15h9v-15H5zm12 2h2v13h-2V6.5zM7 6h5v2H7V6zm0 4h5v2H7v-2z"/>
+                        </svg>
+                        Download Auto Lock &amp; Focus
+                    </a>
+                </div>
+                
+                <div class="cta-perks-row">
+                    <span>✓ $29 / 29€ One-Time Lifetime</span>
+                    <span>✓ 100% Offline &amp; Private</span>
+                    <span>✓ No Account Required</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- MINIMAL FOOTER -->
+    <footer class="simple-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="brand-logo">Auto Lock &amp; Focus</span>
+                <span class="footer-privacy-tag">🔒 100% Offline &amp; Private</span>
+            </div>
+            <div class="footer-meta">
+                <span>&copy; 2026 Auto Lock &amp; Focus. Stay mindful!</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
