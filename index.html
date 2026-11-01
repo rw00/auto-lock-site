@@ -21,26 +21,9 @@
 <body>
 
     <!-- Ambient Background Glows -->
-    <div class="glow-sphere glow-sphere-1"></div>
-    <div class="glow-sphere glow-sphere-2"></div>
-    <div class="glow-sphere glow-sphere-3"></div>
-
-    <!-- Header Navigation -->
-    <header class="site-header">
-        <div class="header-container">
-            <a href="index.html" class="brand-link">
-                <span class="brand-icon">🧘</span>
-                <span class="brand-name">Auto Lock &amp; Focus</span>
-            </a>
-            <nav class="nav-links">
-                <a href="#how-different" class="nav-link">Compare</a>
-                <a href="#features" class="nav-link">Features</a>
-                <a href="privacy.html" class="nav-link">Privacy</a>
-                <a href="terms.html" class="nav-link">Terms</a>
-            </nav>
-            <a href="https://google.com" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-primary nav-cta">Get App</a>
-        </div>
-    </header>
+    <div class="glow-sphere glow-sphere-1" aria-hidden="true"></div>
+    <div class="glow-sphere glow-sphere-2" aria-hidden="true"></div>
+    <div class="glow-sphere glow-sphere-3" aria-hidden="true"></div>
 
     <!-- Main Container -->
     <main class="page-container">
@@ -59,20 +42,20 @@
                 </h1>
                 
                 <p class="hero-subtitle">
-                    Most screen time blockers fail because surrender takes zero effort. 
-                    <strong>Auto Lock &amp; Focus</strong> adds smart defaults, auto-reverting limits, and mindful pauses that help you stay present.
+                    Most screen time blockers fail because giving up takes one tap. 
+                    <strong>Auto Lock &amp; Focus</strong> uses smart defaults, auto-reverting limits, and mindful pauses to keep you present.
                 </p>
                 
                 <div class="hero-cta-group">
                     <a href="https://google.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="hero-download-btn">
-                        <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path d="M3 20.5v-17c0-.55.45-1 1-1h11c.55 0 1 .45 1 1v17c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1zm2-16v15h9v-15H5zm12 2h2v13h-2V6.5zM7 6h5v2H7V6zm0 4h5v2H7v-2z"/>
                         </svg>
                         Download App
                     </a>
                     <a href="#how-different" class="btn btn-secondary">
                         See Comparison
-                        <svg class="arrow-icon" viewBox="0 0 20 20" fill="currentColor">
+                        <svg class="arrow-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M14.707 10.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 12.586V4a1 1 0 012 0v8.586l2.293-2.293a1 1 0 011.414 0z" clip-rule="evenodd" />
                         </svg>
                     </a>
@@ -89,29 +72,13 @@
 
             <!-- Hero Phone Mockup Visual -->
             <div class="hero-visual-wrapper load-fade-up" style="--delay: 0.25s;">
-                <div class="hero-phone-card rotated-left">
+                <div class="hero-phone-card">
                     <img src="assets/LockScreen-cropped.png" alt="Auto Lock and Focus Lock Screen Interface" class="phone-mockup-img">
-                    
-                    <div class="floating-badge badge-top-right">
-                        <div class="badge-icon green-icon">⚡</div>
-                        <div>
-                            <div class="badge-label">Auto-Reverting</div>
-                            <div class="badge-val">Limits restore automatically</div>
-                        </div>
-                    </div>
-
-                    <div class="floating-badge badge-bottom-left">
-                        <div class="badge-icon indigo-icon">🔒</div>
-                        <div>
-                            <div class="badge-label">100% Offline</div>
-                            <div class="badge-val">Zero data collection</div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- 2. THE SHOWDOWN: HOW IS AUTO LOCK & FOCUS DIFFERENT? -->
+        <!-- 2. COMPARISON SECTION -->
         <section class="comparison-section" id="how-different">
             <div class="section-header" data-scroll-animate>
                 <div class="section-tag">THE WILLPOWER TRAP</div>
@@ -120,11 +87,10 @@
                     <span class="serif-italic">And why friction works.</span>
                 </h2>
                 <p class="section-description">
-                    When temptation strikes, willpower collapses if your app makes giving up effortless. See what happens when you hit a limit:
+                    Willpower collapses when bypassing a limit is effortless. Here is what happens when your time runs out:
                 </p>
             </div>
 
-            <!-- 3-Column Showdown Grid Using Available Screenshots -->
             <div class="showdown-grid">
 
                 <!-- 1. SAMSUNG DIGITAL WELLBEING -->
@@ -134,10 +100,10 @@
                     </div>
                     <h3 class="showdown-card-title">The 23-Hour Wheel Trap</h3>
                     <p class="showdown-body">
-                        Allows you to spin the timer to 23 hours in two seconds. A limit that effortless to bypass provides zero protection during a weak moment.
+                        Lets you spin the timer to 23 hours in two seconds, offering zero protection in a moment of weakness.
                     </p>
                     <div class="screenshot-showcase">
-                        <img src="assets/DigitlWellbeing-easy-wheel.jpg" alt="Samsung Digital Wellbeing timer wheel set to 23 hours" class="showcase-img showcase-img-center">
+                        <img src="assets/DigitlWellbeing-easy-wheel.jpg" alt="Samsung Digital Wellbeing timer wheel set to 23 hours" class="showcase-img showcase-img-center" loading="lazy">
                         <div class="screenshot-caption danger-caption">23 hours granted in a single flick</div>
                     </div>
                 </div>
@@ -149,10 +115,10 @@
                     </div>
                     <h3 class="showdown-card-title">The Giant Disable Button</h3>
                     <p class="showdown-body">
-                        Places a prominent "Disable" button directly on the home screen. One impulse tap completely disarms your blocker when you need it most.
+                        Puts a giant "Disable" button right on the home screen. One impulse tap disarms your blocker completely.
                     </p>
                     <div class="screenshot-showcase">
-                        <img src="assets/Switchly-green-disable-btn.png" alt="Switchly with giant Disable button on screen" class="showcase-img showcase-img-top">
+                        <img src="assets/Switchly-green-disable-btn.png" alt="Switchly with giant Disable button on screen" class="showcase-img showcase-img-top" loading="lazy">
                         <div class="screenshot-caption danger-caption">One tap cancels all protection</div>
                     </div>
                 </div>
@@ -164,10 +130,10 @@
                     </div>
                     <h3 class="showdown-card-title">Friction That Protects</h3>
                     <p class="showdown-body">
-                        No giant disable buttons. No endless wheel spinning. Temporary extensions auto-revert back to locked, and gentle pauses break dopamine loops.
+                        No disable buttons or 23-hour wheels. Brief extensions auto-revert to locked, and pauses break impulse loops.
                     </p>
                     <div class="screenshot-showcase">
-                        <img src="assets/LockScreen-cropped.png" alt="Auto Lock Be Present mindful lock screen" class="showcase-img showcase-img-top">
+                        <img src="assets/LockScreen-cropped.png" alt="Auto Lock Be Present mindful lock screen" class="showcase-img showcase-img-top" loading="lazy">
                         <div class="screenshot-caption success-caption">Limits auto-revert &amp; guard your focus</div>
                     </div>
                 </div>
@@ -175,150 +141,72 @@
             </div>
         </section>
 
-        <!-- 3. SMART DEFAULTS -->
+        <!-- 3. MERGED FEATURES SECTION: SMART DEFAULTS, AUTO-REVERT & MINDFUL PAUSES -->
         <section class="feature-detail-section" id="features">
-            <div class="section-header" data-scroll-animate>
-                <div class="section-tag">SMART DEFAULTS</div>
-                <h2 class="section-title">
-                    Built for real life. Zero setup.
-                </h2>
-                <p class="section-description">
-                    Distracting apps are classified with healthy limits right out of the box. No complex rules or configuration needed.
-                </p>
-            </div>
-
-            <div class="cards-duo">
-                <!-- CARD 1: 2-HOUR MAX CEILING -->
-                <div class="dual-feature-card" data-scroll-animate>
-                    <div class="dual-feature-header">
-                        <div class="feature-icon-badge">⏱️</div>
-                        <h3 class="dual-title">Max 2 Hours Daily Screen Time</h3>
-                        <p class="dual-desc">
-                            A strict 2-hour daily ceiling across distracting apps. Keeps daily phone usage intentional without manual monitoring.
-                        </p>
-                    </div>
-                    <div class="feature-highlight-pill">
-                        <span>🛡️ Active by default across social &amp; entertainment apps</span>
-                    </div>
-                </div>
-
-                <!-- CARD 2: SLEEP GUARD -->
-                <div class="dual-feature-card" data-scroll-animate>
-                    <div class="dual-feature-header">
-                        <div class="feature-icon-badge">🌙</div>
-                        <h3 class="dual-title">Midnight to 9:00 AM Sleep Guard</h3>
-                        <p class="dual-desc">
-                            Automatically locks distracting apps overnight. Protects your sleep schedule without requiring manual toggling each evening.
-                        </p>
-                    </div>
-                    <div class="feature-highlight-pill">
-                        <span>💤 Essential apps like Phone and Alarm always stay available</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 4. AUTO-REVERTING EXTENSIONS -->
-        <section class="feature-detail-section" id="auto-revert">
             <div class="feature-split-layout">
                 <div class="feature-split-text" data-scroll-animate>
-                    <div class="section-tag">TEMPORARY EXTENSIONS</div>
+                    <div class="section-tag">HOW IT WORKS</div>
                     <h2 class="section-title">
-                        Extend when needed.<br>
-                        <span class="serif-italic">It auto-reverts and re-locks.</span>
+                        Smart defaults.<br>
+                        <span class="serif-italic">Zero setup required.</span>
                     </h2>
                     <p class="feature-body-p">
-                        Need a quick 2-minute extension? Auto Lock lets you unlock temporarily, but <strong>automatically re-locks once the timer expires</strong>. Your limits never creep upward.
+                        Distracting apps are capped out of the box with automatic boundaries that protect your day and night—without manual rules or creeping limits.
                     </p>
-                    <div class="perk-bullets">
-                        <div class="perk-bullet-item">
-                            <span class="perk-check">✓</span>
-                            <span>Temporary access for essential quick tasks</span>
+
+                    <div class="merged-features-list">
+                        <div class="merged-feature-item">
+                            <div class="merged-feature-icon">⏱️</div>
+                            <div>
+                                <h3 class="merged-feature-title">2-Hour Daily Cap &amp; Overnight Sleep Guard</h3>
+                                <p class="merged-feature-desc">
+                                    Caps social and entertainment apps at 2 hours daily and locks them from Midnight to 9:00 AM, while Phone and Alarm stay accessible.
+                                </p>
+                            </div>
                         </div>
-                        <div class="perk-bullet-item">
-                            <span class="perk-check">✓</span>
-                            <span>Auto-reverts back to locked without manual action</span>
+
+                        <div class="merged-feature-item">
+                            <div class="merged-feature-icon">⚡</div>
+                            <div>
+                                <h3 class="merged-feature-title">Auto-Reverting +2m Extensions</h3>
+                                <p class="merged-feature-desc">
+                                    Need a quick task? Unlock temporarily for 2 minutes—limits automatically revert and re-lock as soon as the timer expires.
+                                </p>
+                            </div>
                         </div>
-                        <div class="perk-bullet-item">
-                            <span class="perk-check">✓</span>
-                            <span>Prevents boundary erosion over time</span>
+
+                        <div class="merged-feature-item">
+                            <div class="merged-feature-icon">🧘</div>
+                            <div>
+                                <h3 class="merged-feature-title">30-Second Mindful Breathing Pauses</h3>
+                                <p class="merged-feature-desc">
+                                    Continuous scrolling triggers a brief breathing screen that interrupts dopamine loops and helps you put the phone down.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Mockup with Live Countdown Revert Timer -->
                 <div class="feature-split-visual" data-scroll-animate>
-                    <div class="phone-mockup-frame rotated-right">
-                        <img src="assets/LockScreen-cropped.png" alt="Auto-reverting extension timer" class="phone-mockup-img">
-                        
-                        <div class="interactive-timer-pill">
-                            <div class="pill-top-row">
-                                <span class="pill-status-dot pulse-dot"></span>
-                                <span class="pill-title">Temporary +2m Extension</span>
-                            </div>
-                            <div class="pill-timer" id="revert-live-timer">01:59 remaining</div>
-                            <div class="pill-progress-bar">
-                                <div class="pill-progress-fill" id="revert-progress-bar"></div>
-                            </div>
-                            <div class="pill-footer-note">Auto-reverts and re-locks automatically</div>
-                        </div>
+                    <div class="phone-mockup-frame">
+                        <img src="assets/MindfulBreak-cropped.png" alt="Mindful pause 30-second breathing screen" class="phone-mockup-img" loading="lazy">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 5. MINDFUL REST & BREAKS -->
-        <section class="feature-detail-section" id="mindful-breaks">
-            <div class="feature-split-layout reversed">
-                
-                <div class="feature-split-visual" data-scroll-animate>
-                    <div class="phone-mockup-frame rotated-left">
-                        <img src="assets/MindfulBreak-cropped.png" alt="Mindful pause 30-second breathing screen" class="phone-mockup-img">
-                        
-                        <div class="interactive-breathing-card">
-                            <div class="breathing-guide-title">Mindful Pause</div>
-                            <div class="breathing-ring-wrapper">
-                                <div class="breathing-ring-outer" id="breathing-ring"></div>
-                                <div class="breathing-ring-inner">
-                                    <span class="breathing-instruction" id="breathing-text">Inhale...</span>
-                                </div>
-                            </div>
-                            <div class="breathing-controls">
-                                <button type="button" class="btn btn-xs btn-outline" id="toggle-breathing-btn">Pause</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="feature-split-text" data-scroll-animate>
-                    <div class="section-tag">ANTI-DOOMSCROLLING</div>
-                    <h2 class="section-title">
-                        Gentle pauses stop doomscrolling.
-                    </h2>
-                    <p class="feature-body-p">
-                        Continuous screen time triggers a 30-second breathing pause. This interrupts dopamine loops and gives you space to reflect before mindless scrolling takes over.
-                    </p>
-                    <div class="reflection-mini-box">
-                        <span class="reflection-icon">🧘</span>
-                        <span>A 30-second pause breaks the trance and restores your presence.</span>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- 6. FINAL DOWNLOAD CTA -->
+        <!-- 4. FINAL DOWNLOAD CTA -->
         <section class="cta-section">
             <div class="cta-card" data-scroll-animate>
-                <div class="cta-glow"></div>
+                <div class="cta-glow" aria-hidden="true"></div>
                 <h2 class="cta-title">
-                    Stop mindlessly using your phone.<br>
+                    Stop mindless scrolling.<br>
                     <span class="serif-italic">Stay mindful.</span>
                 </h2>
                 
                 <div class="cta-btn-wrapper">
                     <a href="https://google.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large" id="footer-download-btn">
-                        <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path d="M3 20.5v-17c0-.55.45-1 1-1h11c.55 0 1 .45 1 1v17c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1zm2-16v15h9v-15H5zm12 2h2v13h-2V6.5zM7 6h5v2H7V6zm0 4h5v2H7v-2z"/>
                         </svg>
                         Download Auto Lock &amp; Focus
@@ -335,7 +223,7 @@
 
     </main>
 
-    <!-- FOOTER WITH LEGAL LINKS -->
+    <!-- FOOTER WITH 2 LEGAL LINKS -->
     <footer class="simple-footer">
         <div class="footer-container">
             <div class="footer-brand">
@@ -343,18 +231,15 @@
                 <span class="footer-privacy-tag">🔒 100% Offline &amp; Private</span>
             </div>
             <div class="footer-nav">
-                <a href="#how-different">Compare</a>
-                <a href="#features">Features</a>
                 <a href="privacy.html">Privacy Policy</a>
                 <a href="terms.html">Terms &amp; Conditions</a>
             </div>
             <div class="footer-meta">
-                <span>&copy; 2026 Auto Lock &amp; Focus. Stay mindful!</span>
+                <span>&copy; 2026 Auto Lock &amp; Focus. All rights reserved.</span>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript File -->
     <script src="script.js"></script>
 </body>
 </html>
