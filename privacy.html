@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy — Auto Lock &amp; Focus</title>
-    <meta name="description" content="Privacy Policy for Auto Lock &amp; Focus. 100% offline, zero telemetry, no accounts, and zero personal data collection.">
+    <meta name="description" content="Privacy Policy for the Auto Lock &amp; Focus Android application. Zero personal data collection by the Developer; payment processing conducted via Google Play.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
@@ -13,130 +13,114 @@
 <body class="legal-page">
 
     <!-- Ambient Background Glows -->
-    <div class="glow-sphere glow-sphere-1"></div>
-    <div class="glow-sphere glow-sphere-2"></div>
-
-    <!-- Header Navigation -->
-    <header class="site-header">
-        <div class="header-container">
-            <a href="index.html" class="brand-link">
-                <span class="brand-icon">🧘</span>
-                <span class="brand-name">Auto Lock &amp; Focus</span>
-            </a>
-            <nav class="nav-links">
-                <a href="index.html#how-different" class="nav-link">Compare</a>
-                <a href="index.html#features" class="nav-link">Features</a>
-                <a href="privacy.html" class="nav-link active">Privacy</a>
-                <a href="terms.html" class="nav-link">Terms</a>
-            </nav>
-            <a href="https://google.com" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-primary nav-cta">Get App</a>
-        </div>
-    </header>
+    <div class="glow-sphere glow-sphere-1" aria-hidden="true"></div>
+    <div class="glow-sphere glow-sphere-2" aria-hidden="true"></div>
 
     <!-- Main Content Container -->
     <main class="page-container legal-container">
         <div class="legal-header">
-            <div class="badge-pill">
-                <span class="badge-dot pulse-dot"></span>
-                <span>Privacy First • Zero Telemetry</span>
-            </div>
+            <a href="index.html" class="back-home-link">&larr; Back to Auto Lock &amp; Focus</a>
             <h1 class="legal-title">Privacy Policy</h1>
-            <p class="legal-updated">Last updated: November 1, 2026</p>
+            <p class="legal-updated">Effective Date: November 1, 2026 &bull; Last Updated: November 1, 2026</p>
         </div>
 
         <article class="legal-content">
             <section class="legal-section">
-                <h2>1. Core Commitment: 100% Offline &amp; Zero Data Collection</h2>
+                <h2>1. Introduction and Scope</h2>
                 <p>
-                    <strong>Auto Lock &amp; Focus</strong> ("the App", "we", "us", or "our") is built on an uncompromising privacy foundation: <strong>we collect, transmit, store, sell, and monetize zero personal data</strong>.
-                </p>
-                <p>
-                    The App operates entirely offline and does not connect to external servers, cloud storage, third-party analytics platforms, or advertising networks. Everything you do within the App stays strictly on your physical Android device.
+                    This Privacy Policy governs the collection, processing, and protection of information in connection with the <strong>Auto Lock &amp; Focus</strong> mobile application for Android ("the Application" or "the App"), provided by the independent developer of Auto Lock &amp; Focus ("Developer", "we", "us", or "our"). By installing or using the Application, you acknowledge that you have read and understood this Privacy Policy.
                 </p>
             </section>
 
             <section class="legal-section">
-                <h2>2. Android Permissions &amp; How They Are Used</h2>
+                <h2>2. Zero Data Collection Policy</h2>
                 <p>
-                    To enforce intentional focus sessions, prevent mindless distraction, and display mindful breathing overlays, the App requires specific Android system permissions. These permissions are executed solely on-device:
+                    <strong>We do not collect any data.</strong> The Developer does not collect, request, record, transmit, store on external servers, process, share, lease, or sell any personal data, personally identifiable information ("PII"), usage statistics, behavioral telemetry, device identifiers, IP addresses, location data, or diagnostic logs.
+                </p>
+                <p>
+                    The Application operates entirely offline on your local Android device. We do not maintain or operate any backend servers, cloud databases, or user account systems capable of receiving data from your device.
+                </p>
+            </section>
+
+            <section class="legal-section">
+                <h2>3. Payment Processing and Collection of Email Addresses by Google</h2>
+                <p>
+                    While the Developer does not collect any personal or financial data, purchases of the Application license are processed exclusively by <strong>Google LLC</strong> through the <strong>Google Play Billing</strong> platform.
+                </p>
+                <p>
+                    <strong>Google records your email address for payments:</strong> When you purchase the Application on the Google Play Store, Google collects and records the email address associated with your Google Account, along with your payment method details, billing address, and transaction history, in order to process your payment, issue order receipts, prevent fraud, and verify your lifetime license entitlement across your Android devices.
+                </p>
+                <p>
+                    The Developer never receives or accesses your credit card numbers, bank account information, or raw payment credentials. Google's collection, storage, and processing of your email address and payment records are governed exclusively by the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> and the <a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice" target="_blank" rel="noopener noreferrer">Google Payments Privacy Notice</a>.
+                </p>
+            </section>
+
+            <section class="legal-section">
+                <h2>4. Android System Permissions and Local On-Device Execution</h2>
+                <p>
+                    To enforce screen time limits, overnight schedules, and focus interventions, the Application requests specific Android system permissions. All data accessed through these permissions is processed strictly in volatile memory or sandboxed local storage on your device and is never transmitted externally:
                 </p>
                 
                 <div class="permission-item">
-                    <h3>Accessibility Service (<code>android.permission.BIND_ACCESSIBILITY_SERVICE</code>)</h3>
+                    <h3>Accessibility Service API (<code>android.permission.BIND_ACCESSIBILITY_SERVICE</code>)</h3>
                     <p>
-                        The Accessibility Service is used strictly to identify the foreground package name (the app currently active on your screen). When a user-designated distracting app is opened or a continuous screen threshold is crossed, the service displays a mindful break or lock overlay.
+                        The Accessibility Service API is utilized solely to detect the package name of the currently active foreground application so the Application can display a lock screen or mindful breathing overlay when a restricted application is launched or a continuous usage limit is reached.
                     </p>
                     <p>
-                        <strong>What we NEVER do:</strong> We do NOT monitor, record, capture, or store typed text, passwords, messages, screen contents, credentials, or personal interactions. The service performs package-name matching exclusively on your local device.
+                        The Application does not read, inspect, log, capture, or transmit on-screen text, keystrokes, passwords, personal messages, notification contents, or user credentials.
                     </p>
                 </div>
 
                 <div class="permission-item">
-                    <h3>Usage Stats Access (<code>android.permission.PACKAGE_USAGE_STATS</code>)</h3>
+                    <h3>Package Usage Statistics (<code>android.permission.PACKAGE_USAGE_STATS</code>)</h3>
                     <p>
-                        The Usage Stats permission allows the App to calculate your daily distracting app usage and enforce your daily budget (such as the 2-hour daily ceiling). All calculations are computed in real time on your phone. No usage statistics or logs ever leave your device.
+                        The Usage Access permission enables the Application to query aggregate foreground usage durations on your device in order to enforce daily screen time caps. All usage calculations are performed locally on your device.
                     </p>
                 </div>
             </section>
 
             <section class="legal-section">
-                <h2>3. No User Accounts &amp; No Registration</h2>
+                <h2>5. Local Data Storage, Retention, and Deletion</h2>
                 <p>
-                    Auto Lock &amp; Focus requires no user registration, username, email address, password, or third-party OAuth login (e.g., Google or Facebook sign-in). You can use all core features immediately upon installation without providing any identity information.
+                    All user preferences, designated application lists, schedule configurations, and timer states are stored strictly within the Application's private, sandboxed internal storage directory on your Android device via Android Jetpack DataStore.
+                </p>
+                <p>
+                    You retain full control over this local data and may permanently erase all stored configurations at any time by clearing the Application's storage via <em>Android Settings &gt; Apps &gt; Auto Lock &amp; Focus &gt; Storage &amp; Cache &gt; Clear Storage</em>, or by uninstalling the Application from your device.
                 </p>
             </section>
 
             <section class="legal-section">
-                <h2>4. Payments &amp; In-App Purchases</h2>
+                <h2>6. No Third-Party Analytics or Advertising SDKs</h2>
                 <p>
-                    Lifetime access to Auto Lock &amp; Focus is purchased as a one-time fee ($29 / 29€) processed directly by the <strong>Google Play Store Billing System</strong>. 
-                </p>
-                <p>
-                    We never receive, process, or store credit card details, bank information, or billing addresses. Payment processing and purchase receipts are governed entirely by Google's <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Payments Privacy Notice</a>.
+                    The Application does not integrate any third-party analytics frameworks, crash reporting services, advertising networks, or cross-application tracking SDKs.
                 </p>
             </section>
 
             <section class="legal-section">
-                <h2>5. Zero Third-Party SDKs &amp; Trackers</h2>
+                <h2>7. Disclaimer Regarding Application Blocking and Missed Notifications</h2>
                 <p>
-                    Auto Lock &amp; Focus contains:
-                </p>
-                <ul>
-                    <li><strong>No analytics SDKs</strong> (no Firebase Analytics, Mixpanel, or Amplitude).</li>
-                    <li><strong>No crash reporting trackers</strong> (no Bugsnag, Sentry, or Crashlytics uploading user logs).</li>
-                    <li><strong>No advertisement SDKs</strong> (no AdMob, Unity Ads, or Meta Audience Network).</li>
-                    <li><strong>No social tracking pixels or identifiers</strong>.</li>
-                </ul>
-            </section>
-
-            <section class="legal-section">
-                <h2>6. Local Data Storage &amp; Deletion</h2>
-                <p>
-                    Your preferences, custom app whitelists, schedule settings, and focus session history are stored locally using Android Jetpack DataStore within the App's sandboxed private storage.
-                </p>
-                <p>
-                    <strong>Deleting your data:</strong> You can completely erase all data, configurations, and session records at any time by clearing the App's storage via <em>Android Settings &gt; Apps &gt; Auto Lock &gt; Clear Storage</em> or by uninstalling the application.
+                    Because the Application is designed to restrict access to designated applications and display full-screen intervention overlays locally on your device, its operation may suppress, delay, or prevent you from viewing or receiving notifications, messages, calls, or alerts from restricted applications. As further detailed in our <a href="terms.html">Terms and Conditions</a>, we are not liable for any missed notifications, delayed communications, or any consequences resulting from application blocking.
                 </p>
             </section>
 
             <section class="legal-section">
-                <h2>7. Children's Privacy</h2>
+                <h2>8. Children's Privacy</h2>
                 <p>
-                    The App does not collect personal data from anyone, including children under the age of 13 (or under 16 in the European Economic Area). Because no personal information is ever collected or transmitted, the App complies fully with COPPA and GDPR provisions regarding minors.
+                    Because we do not collect, store, or process any personal information from any user, we do not knowingly or inadvertently collect personal data from children under the age of 13 (or the applicable age of digital consent in your jurisdiction, including under the U.S. Children's Online Privacy Protection Act ("COPPA") and the EU General Data Protection Regulation ("GDPR")).
                 </p>
             </section>
 
             <section class="legal-section">
-                <h2>8. Changes to This Privacy Policy</h2>
+                <h2>9. Changes to This Privacy Policy</h2>
                 <p>
-                    We may update this Privacy Policy occasionally to reflect updates to the App or relevant Android regulations. Any modifications will be posted directly to this page with an updated revision date.
+                    We reserve the right to amend this Privacy Policy to reflect changes in legal, regulatory, or operational requirements. Any updated version will be published on this page with a revised Effective Date.
                 </p>
             </section>
 
             <section class="legal-section">
-                <h2>9. Contact Us</h2>
+                <h2>10. Contact Information</h2>
                 <p>
-                    If you have questions or inquiries regarding this Privacy Policy or the App's local architecture, please contact us:
+                    If you have any legal inquiries or questions regarding this Privacy Policy, please contact the Developer at:
                 </p>
                 <p>
                     <strong>Email:</strong> <a href="mailto:raafatwahb@gmail.com">raafatwahb@gmail.com</a>
@@ -153,12 +137,11 @@
                 <span class="footer-privacy-tag">🔒 100% Offline &amp; Private</span>
             </div>
             <div class="footer-nav">
-                <a href="index.html">Home</a>
                 <a href="privacy.html" class="active">Privacy Policy</a>
                 <a href="terms.html">Terms &amp; Conditions</a>
             </div>
             <div class="footer-meta">
-                <span>&copy; 2026 Auto Lock &amp; Focus. Stay mindful!</span>
+                <span>&copy; 2026 Auto Lock &amp; Focus. All rights reserved.</span>
             </div>
         </div>
     </footer>
