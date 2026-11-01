@@ -1,6 +1,7 @@
 /* ==========================================================================
    Auto Lock & Focus — Stylesheet
    Design: Midnight Obsidian, Curated Accents, Glassmorphism & High Aesthetics
+   Rule: Text must NEVER be centered on mobile view (left-aligned everywhere)
    ========================================================================== */
 
 :root {
@@ -62,6 +63,7 @@ body {
     position: relative;
     line-height: 1.6;
     background-color: var(--bg-dark);
+    text-align: left;
 }
 
 /* Typography Enhancements */
@@ -108,6 +110,68 @@ body {
     background: radial-gradient(circle, rgba(99, 102, 241, 0.3) 0%, rgba(139, 92, 246, 0.12) 70%, transparent 100%);
 }
 
+/* ==========================================================================
+   HEADER NAVIGATION
+   ========================================================================== */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(6, 8, 16, 0.8);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 14px 0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: -0.01em;
+}
+
+.brand-icon {
+    font-size: 1.25rem;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #ffffff;
+}
+
+.nav-cta {
+    margin-left: 8px;
+}
+
 /* Page Container */
 .page-container {
     max-width: 1200px;
@@ -115,6 +179,7 @@ body {
     padding: 40px 24px 0;
     position: relative;
     z-index: 1;
+    text-align: left;
 }
 
 /* Page Load Animations */
@@ -153,9 +218,14 @@ body {
     font-size: 1.05rem;
 }
 
+.btn-sm {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+}
+
 .btn-xs {
-    padding: 5px 12px;
-    font-size: 0.78rem;
+    padding: 6px 14px;
+    font-size: 0.8rem;
 }
 
 .btn-primary {
@@ -249,8 +319,9 @@ body {
     grid-template-columns: 1.15fr 0.85fr;
     align-items: center;
     gap: 50px;
-    padding: 40px 0 80px;
-    min-height: 85vh;
+    padding: 50px 0 80px;
+    min-height: 80vh;
+    text-align: left;
 }
 
 .hero-content {
@@ -258,6 +329,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     gap: 22px;
+    text-align: left;
 }
 
 .hero-title {
@@ -266,6 +338,7 @@ body {
     line-height: 1.1;
     letter-spacing: -0.035em;
     color: #ffffff;
+    text-align: left;
 }
 
 .hero-subtitle {
@@ -273,6 +346,7 @@ body {
     line-height: 1.6;
     color: var(--text-secondary);
     max-width: 580px;
+    text-align: left;
 }
 
 .hero-subtitle strong {
@@ -285,6 +359,7 @@ body {
     gap: 16px;
     margin-top: 6px;
     flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 .hero-specs {
@@ -293,6 +368,8 @@ body {
     gap: 10px;
     font-size: 0.84rem;
     color: var(--text-muted);
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .spec-dot {
@@ -333,7 +410,7 @@ body {
     display: block;
 }
 
-/* Floating Glass Badges */
+/* Floating Badges */
 .floating-badge {
     position: absolute;
     display: flex;
@@ -401,22 +478,18 @@ body {
 }
 
 /* ==========================================================================
-   2. THE SHOWDOWN SECTION (SAMSUNG 2-WHEEL & SWITCHLY DISABLE)
+   2. THE SHOWDOWN SECTION (REAL SCREENSHOTS)
    ========================================================================== */
 .comparison-section {
     padding: 70px 0 80px;
-    scroll-margin-top: 40px;
+    scroll-margin-top: 60px;
+    text-align: left;
 }
 
 .section-header {
     margin-bottom: 40px;
-}
-
-.section-header.center {
-    text-align: center;
-    max-width: 780px;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: left;
+    max-width: 800px;
 }
 
 .section-tag {
@@ -426,6 +499,7 @@ body {
     letter-spacing: 0.1em;
     color: var(--primary-indigo);
     margin-bottom: 10px;
+    text-align: left;
 }
 
 .section-title {
@@ -435,16 +509,14 @@ body {
     letter-spacing: -0.03em;
     color: #ffffff;
     margin-bottom: 12px;
+    text-align: left;
 }
 
 .section-description {
     font-size: 1.02rem;
     color: var(--text-secondary);
     line-height: 1.55;
-}
-
-.section-description.center-text {
-    margin: 0 auto;
+    text-align: left;
 }
 
 /* Showdown 3-Card Grid */
@@ -458,18 +530,27 @@ body {
     background: var(--bg-card);
     border: 1px solid var(--surface-border);
     border-radius: var(--radius-lg);
-    padding: 26px;
+    padding: 24px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     box-shadow: var(--shadow-card);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     transition: transform 0.3s ease, border-color 0.3s ease;
+    text-align: left;
 }
 
 .showdown-card:hover {
     transform: translateY(-4px);
+}
+
+.showdown-card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+    text-align: left;
 }
 
 .card-pill {
@@ -497,14 +578,11 @@ body {
 }
 
 .showdown-body {
-    font-size: 0.93rem;
+    font-size: 0.92rem;
     color: var(--text-secondary);
-    line-height: 1.55;
-    margin-bottom: 20px;
-}
-
-.showdown-body strong {
-    color: #ffffff;
+    line-height: 1.5;
+    margin-bottom: 18px;
+    text-align: left;
 }
 
 .highlight-card {
@@ -513,231 +591,68 @@ body {
     box-shadow: 0 20px 50px rgba(99, 102, 241, 0.15);
 }
 
-/* ==========================================================================
-   AUTHENTIC SAMSUNG 2-WHEEL VERTICAL DRUM PICKER
-   ========================================================================== */
-.samsung-picker-widget {
-    background: #000000;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+/* Screenshot Showcase Inside Showdown Cards */
+.screenshot-showcase {
+    position: relative;
     border-radius: var(--radius-md);
-    padding: 14px 16px;
+    overflow: hidden;
+    background: #000000;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     margin-top: auto;
-}
-
-.picker-title-bar {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--text-muted);
-    margin-bottom: 10px;
+    flex-direction: column;
 }
 
-.picker-quick-flicks {
-    display: flex;
-    gap: 6px;
+.showcase-img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
 }
 
-.btn-flick {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    color: #ffffff;
-    font-size: 0.7rem;
-    font-weight: 600;
-    padding: 2px 7px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.2s ease;
+.showcase-img-center {
+    object-position: center 40%;
 }
 
-.btn-flick:hover {
-    background: rgba(255, 255, 255, 0.2);
+.showcase-img-top {
+    object-position: top center;
 }
 
-.btn-flick.danger {
-    background: rgba(244, 63, 94, 0.2);
-    border-color: rgba(244, 63, 94, 0.4);
+.showdown-card:hover .showcase-img {
+    transform: scale(1.03);
+}
+
+.screenshot-caption {
+    padding: 10px 14px;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    background: rgba(10, 14, 26, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: left;
+}
+
+.screenshot-caption.danger-caption {
     color: #fb7185;
 }
 
-.btn-flick.danger:hover {
-    background: rgba(244, 63, 94, 0.35);
-}
-
-/* Drum Wheels Container */
-.samsung-drums-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 120px;
-    overflow: hidden;
-    user-select: none;
-    mask-image: linear-gradient(to bottom, transparent 0%, black 25%, black 75%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 25%, black 75%, transparent 100%);
-}
-
-.drum-highlight-bar {
-    position: absolute;
-    top: 50%;
-    left: 8%;
-    right: 8%;
-    transform: translateY(-50%);
-    height: 38px;
-    background: rgba(255, 255, 255, 0.08);
-    border-top: 1px solid rgba(244, 63, 94, 0.4);
-    border-bottom: 1px solid rgba(244, 63, 94, 0.4);
-    border-radius: 6px;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.drum-column {
-    position: relative;
-    width: 80px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.drum-label {
-    position: absolute;
-    top: 2px;
-    font-size: 0.65rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    z-index: 3;
-}
-
-.drum-wheel-items {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 40px 0;
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.wheel-item {
-    height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.15rem;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.3);
-    cursor: pointer;
-    transition: all 0.2s ease;
-    width: 100%;
-}
-
-.wheel-item.active {
-    font-size: 1.45rem;
-    font-weight: 800;
-    color: #f43f5e;
-}
-
-.drum-separator {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: rgba(255, 255, 255, 0.4);
-    padding: 0 8px;
-    z-index: 2;
-}
-
-.picker-feedback-bar {
-    font-size: 0.78rem;
-    line-height: 1.4;
-    margin-top: 10px;
-    min-height: 36px;
-    display: flex;
-    align-items: center;
-}
-
-.danger-feedback {
-    color: #fda4af;
+.screenshot-caption.success-caption {
+    color: #34d399;
 }
 
 /* ==========================================================================
-   SWITCHLY & LOCK: GIANT DISABLE BUTTON
-   ========================================================================== */
-.giant-disable-widget {
-    background: #000000;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: var(--radius-md);
-    padding: 16px;
-    margin-top: auto;
-}
-
-.giant-btn-label {
-    font-size: 0.74rem;
-    font-weight: 600;
-    color: var(--text-muted);
-    margin-bottom: 10px;
-}
-
-.mock-giant-disable-btn {
-    width: 100%;
-    padding: 15px;
-    background: linear-gradient(135deg, #f43f5e 0%, #be123c 100%);
-    border: none;
-    border-radius: 12px;
-    color: #ffffff;
-    font-weight: 800;
-    font-size: 0.88rem;
-    letter-spacing: 0.05em;
-    cursor: pointer;
-    box-shadow: 0 8px 20px rgba(244, 63, 94, 0.4);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.mock-giant-disable-btn:hover {
-    transform: scale(1.02);
-    box-shadow: 0 12px 28px rgba(244, 63, 94, 0.6);
-}
-
-.mock-giant-disable-btn:active {
-    transform: scale(0.97);
-}
-
-/* Solution Card Perks */
-.solution-perks-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: auto;
-}
-
-.perk-row {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    font-size: 0.88rem;
-    color: var(--text-secondary);
-    line-height: 1.45;
-}
-
-.perk-row strong {
-    color: #ffffff;
-}
-
-.perk-icon {
-    font-size: 0.95rem;
-    flex-shrink: 0;
-}
-
-/* ==========================================================================
-   3. SPREAD OUT DATA GRAPHS & FEATURE DETAIL SECTIONS
+   3. FEATURES & DETAIL SECTIONS
    ========================================================================== */
 .feature-detail-section {
     padding: 70px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
+    scroll-margin-top: 60px;
+    text-align: left;
 }
 
-/* Cards Duo (2-Hour Max & Midnight-9am) */
+/* Cards Duo */
 .cards-duo {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -756,6 +671,7 @@ body {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     transition: transform 0.3s ease, border-color 0.3s ease;
+    text-align: left;
 }
 
 .dual-feature-card:hover {
@@ -763,96 +679,44 @@ body {
     border-color: rgba(99, 102, 241, 0.35);
 }
 
+.feature-icon-badge {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
 .dual-title {
-    font-size: 1.35rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 8px;
+    text-align: left;
 }
 
 .dual-desc {
     font-size: 0.93rem;
     color: var(--text-secondary);
     line-height: 1.55;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
+    text-align: left;
 }
 
-.dual-desc em {
-    color: #a5b4fc;
-    font-style: normal;
-}
-
-/* Embedded Stat Box (Spread Out Data Graphs) */
-.embedded-stat-box {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    background: rgba(0, 0, 0, 0.32);
+.feature-highlight-pill {
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.06);
-    border-radius: var(--radius-md);
-    padding: 16px 20px;
+    font-size: 0.8rem;
+    color: #c7d2fe;
+    text-align: left;
 }
 
-.embedded-stat-box.compact {
-    margin-top: 20px;
-}
-
-.chart-box {
-    position: relative;
-    width: 120px;
-    height: 120px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.chart-box canvas {
-    width: 120px !important;
-    height: 120px !important;
-}
-
-.chart-center-val {
-    position: absolute;
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: #ffffff;
-    letter-spacing: -0.03em;
-}
-
-.embedded-stat-content {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.stat-highlight-tag {
-    font-size: 0.68rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--primary-indigo);
-}
-
-.stat-quote {
-    font-size: 0.92rem;
-    color: #ffffff;
-    line-height: 1.4;
-}
-
-.stat-quote strong {
-    color: #ffffff;
-    font-weight: 700;
-}
-
-/* ==========================================================================
-   FEATURE SPLIT LAYOUT (Auto-Revert & Mindful Rest)
-   ========================================================================== */
+/* Feature Split Layout */
 .feature-split-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     align-items: center;
+    text-align: left;
 }
 
 .feature-split-layout.reversed {
@@ -863,16 +727,39 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    text-align: left;
 }
 
 .feature-body-p {
     font-size: 1.02rem;
     color: var(--text-secondary);
     line-height: 1.6;
+    text-align: left;
 }
 
 .feature-body-p strong {
     color: #ffffff;
+}
+
+.perk-bullets {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.perk-bullet-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: #ffffff;
+    text-align: left;
+}
+
+.perk-check {
+    color: var(--accent-emerald);
+    font-weight: 700;
 }
 
 .feature-split-visual {
@@ -905,7 +792,7 @@ body {
     transform: perspective(1000px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) translateY(-6px);
 }
 
-/* Live Timer Pill on Auto-Revert Mockup */
+/* Interactive Timer Pill on Auto-Revert Mockup */
 .interactive-timer-pill {
     position: absolute;
     bottom: 25px;
@@ -919,6 +806,7 @@ body {
     border-radius: 14px;
     padding: 12px 14px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    text-align: left;
 }
 
 .pill-top-row {
@@ -929,6 +817,7 @@ body {
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 4px;
+    text-align: left;
 }
 
 .pill-status-dot {
@@ -944,6 +833,7 @@ body {
     color: #a5b4fc;
     letter-spacing: -0.02em;
     margin-bottom: 6px;
+    text-align: left;
 }
 
 .pill-progress-bar {
@@ -966,9 +856,10 @@ body {
 .pill-footer-note {
     font-size: 0.7rem;
     color: var(--text-muted);
+    text-align: left;
 }
 
-/* Mindful Breathing Visualizer */
+/* Mindful Breathing Visualizer Card */
 .interactive-breathing-card {
     position: absolute;
     bottom: 25px;
@@ -994,12 +885,13 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: #6ee7b7;
+    text-align: left;
 }
 
 .breathing-ring-wrapper {
     position: relative;
-    width: 84px;
-    height: 84px;
+    width: 80px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1038,7 +930,6 @@ body {
     }
 }
 
-/* Reflection Mini Box */
 .reflection-mini-box {
     display: flex;
     align-items: center;
@@ -1049,6 +940,7 @@ body {
     padding: 12px 16px;
     font-size: 0.9rem;
     color: #a7f3d0;
+    text-align: left;
 }
 
 .reflection-icon {
@@ -1057,153 +949,11 @@ body {
 }
 
 /* ==========================================================================
-   LOCK SCREEN CHECKPOINT (STREAMLINED)
-   ========================================================================== */
-.checkpoint-hero-card {
-    background: var(--bg-card);
-    border: 1px solid var(--surface-border);
-    border-radius: var(--radius-xl);
-    padding: 40px;
-    display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 40px;
-    align-items: center;
-    box-shadow: var(--shadow-card);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-}
-
-/* Interactive Lock Screen Frame */
-.interactive-lockscreen-frame {
-    width: 280px;
-    margin: 0 auto;
-    background: #000000;
-    border: 2px solid rgba(255, 255, 255, 0.15);
-    border-radius: 36px;
-    padding: 20px 18px 18px;
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 440px;
-}
-
-.lockscreen-status-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 0.76rem;
-    font-weight: 600;
-    color: #ffffff;
-    margin-bottom: 24px;
-}
-
-.lock-status-icons {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.lockscreen-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 12px;
-    margin: auto 0;
-}
-
-.lock-icon-wrap {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: rgba(99, 102, 241, 0.15);
-    border: 1px solid rgba(99, 102, 241, 0.4);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #a5b4fc;
-}
-
-.lock-icon-wrap svg {
-    width: 20px;
-    height: 20px;
-}
-
-.lockscreen-prompt-title {
-    font-size: 1.1rem;
-    font-weight: 800;
-    color: #ffffff;
-}
-
-.lockscreen-prompt-sub {
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-    line-height: 1.35;
-    max-width: 210px;
-}
-
-.lockscreen-actions {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 100%;
-    margin-top: 6px;
-}
-
-.lock-action-btn {
-    width: 100%;
-    padding: 11px;
-    border-radius: 10px;
-    font-weight: 700;
-    font-size: 0.8rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    border: none;
-}
-
-.be-present-btn {
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-    color: #ffffff;
-    box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
-}
-
-.be-present-btn:hover {
-    transform: translateY(-2px);
-}
-
-.quick-task-btn {
-    background: rgba(255, 255, 255, 0.08);
-    color: var(--text-primary);
-    border: 1px solid var(--surface-border);
-}
-
-.lockscreen-result-msg {
-    font-size: 0.74rem;
-    color: var(--text-muted);
-    line-height: 1.4;
-    min-height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-top: 4px;
-}
-
-.lockscreen-home-indicator {
-    width: 90px;
-    height: 4px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    margin: 14px auto 0;
-}
-
-/* ==========================================================================
    FINAL CTA SECTION
    ========================================================================== */
 .cta-section {
     padding: 60px 0 90px;
+    text-align: left;
 }
 
 .cta-card {
@@ -1211,17 +961,16 @@ body {
     background: linear-gradient(180deg, rgba(99, 102, 241, 0.15) 0%, rgba(14, 20, 36, 0.9) 100%);
     border: 1px solid rgba(99, 102, 241, 0.35);
     border-radius: var(--radius-xl);
-    padding: 60px 30px;
-    text-align: center;
+    padding: 50px 40px;
     box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
     overflow: hidden;
+    text-align: left;
 }
 
 .cta-glow {
     position: absolute;
     top: -50%;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 20%;
     width: 500px;
     height: 500px;
     border-radius: 50%;
@@ -1239,12 +988,15 @@ body {
     margin-bottom: 24px;
     position: relative;
     z-index: 1;
+    text-align: left;
 }
 
 .cta-btn-wrapper {
     position: relative;
     z-index: 1;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .cta-perks-row {
@@ -1252,11 +1004,12 @@ body {
     z-index: 1;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 20px;
     font-size: 0.85rem;
     color: var(--text-muted);
     flex-wrap: wrap;
+    text-align: left;
 }
 
 /* ==========================================================================
@@ -1264,8 +1017,9 @@ body {
    ========================================================================== */
 .simple-footer {
     border-top: 1px solid rgba(255, 255, 255, 0.06);
-    padding: 26px 0;
+    padding: 30px 0;
     background: rgba(6, 8, 16, 0.95);
+    text-align: left;
 }
 
 .footer-container {
@@ -1276,13 +1030,15 @@ body {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 20px;
+    text-align: left;
 }
 
 .footer-brand {
     display: flex;
     align-items: center;
     gap: 14px;
+    text-align: left;
 }
 
 .brand-logo {
@@ -1296,13 +1052,160 @@ body {
     color: var(--accent-emerald);
 }
 
+.footer-nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.footer-nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.2s ease;
+}
+
+.footer-nav a:hover,
+.footer-nav a.active {
+    color: #ffffff;
+}
+
 .footer-meta {
     font-size: 0.82rem;
     color: var(--text-muted);
+    text-align: left;
+}
+
+/* ==========================================================================
+   LEGAL PAGES STYLES (Privacy & Terms)
+   ========================================================================== */
+.legal-container {
+    padding-top: 50px;
+    padding-bottom: 80px;
+    max-width: 860px;
+    text-align: left;
+}
+
+.legal-header {
+    margin-bottom: 36px;
+    text-align: left;
+}
+
+.legal-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: #ffffff;
+    margin-top: 14px;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.legal-updated {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    text-align: left;
+}
+
+.legal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    text-align: left;
+}
+
+.legal-section {
+    background: var(--bg-card);
+    border: 1px solid var(--surface-border);
+    border-radius: var(--radius-lg);
+    padding: 30px;
+    text-align: left;
+}
+
+.legal-section h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 14px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding-bottom: 10px;
+}
+
+.legal-section p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin-bottom: 14px;
+    text-align: left;
+}
+
+.legal-section p:last-child {
+    margin-bottom: 0;
+}
+
+.legal-section strong {
+    color: #ffffff;
+}
+
+.legal-section a {
+    color: #818cf8;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.legal-section a:hover {
+    color: #c7d2fe;
+}
+
+.legal-section ul {
+    margin-left: 20px;
+    margin-top: 8px;
+    margin-bottom: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+
+.legal-section li {
+    font-size: 0.94rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    text-align: left;
+}
+
+.permission-item {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-md);
+    padding: 18px;
+    margin-top: 14px;
+    text-align: left;
+}
+
+.permission-item h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.permission-item code {
+    font-family: monospace;
+    font-size: 0.82rem;
+    background: rgba(99, 102, 241, 0.15);
+    color: #a5b4fc;
+    padding: 2px 6px;
+    border-radius: 4px;
 }
 
 /* ==========================================================================
    SCROLL ANIMATIONS & RESPONSIVE BREAKPOINTS
+   STRICT RULE: No text centered on mobile view (text-align: left everywhere)
    ========================================================================== */
 [data-scroll-animate] {
     opacity: 0;
@@ -1318,16 +1221,25 @@ body {
 @media (max-width: 1024px) {
     .hero-section {
         grid-template-columns: 1fr;
-        text-align: center;
+        text-align: left !important;
         gap: 40px;
     }
 
     .hero-content {
-        align-items: center;
+        align-items: flex-start !important;
+        text-align: left !important;
+    }
+
+    .hero-title,
+    .hero-subtitle,
+    .section-title,
+    .section-description,
+    .cta-title {
+        text-align: left !important;
     }
 
     .hero-subtitle {
-        margin: 0 auto;
+        margin: 0 !important;
     }
 
     .showdown-grid {
@@ -1342,25 +1254,119 @@ body {
     .feature-split-layout.reversed {
         grid-template-columns: 1fr;
         gap: 40px;
-    }
-
-    .checkpoint-hero-card {
-        grid-template-columns: 1fr;
-        padding: 30px;
+        text-align: left !important;
     }
 }
 
 @media (max-width: 768px) {
+    /* Strict left alignment for all text elements on mobile */
+    body,
+    main,
+    section,
+    div,
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    span,
+    a,
+    article {
+        text-align: left;
+    }
+
+    .hero-section {
+        padding: 30px 0 60px;
+        text-align: left !important;
+    }
+
+    .hero-content {
+        align-items: flex-start !important;
+        text-align: left !important;
+    }
+
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
+        text-align: left !important;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        text-align: left !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .hero-cta-group {
+        justify-content: flex-start !important;
+        width: 100%;
+    }
+
+    .hero-specs {
+        justify-content: flex-start !important;
+        text-align: left !important;
+    }
+
+    .section-header {
+        text-align: left !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .section-tag,
+    .section-title,
+    .section-description {
+        text-align: left !important;
     }
 
     .section-title {
         font-size: 1.85rem;
     }
 
+    .showdown-card {
+        padding: 20px;
+        text-align: left !important;
+    }
+
+    .showdown-card-title,
+    .showdown-body,
+    .screenshot-caption {
+        text-align: left !important;
+    }
+
+    .dual-feature-card {
+        padding: 22px;
+        text-align: left !important;
+    }
+
+    .dual-title,
+    .dual-desc {
+        text-align: left !important;
+    }
+
+    .feature-split-text,
+    .feature-body-p,
+    .perk-bullet-item {
+        text-align: left !important;
+    }
+
+    .cta-card {
+        padding: 36px 20px;
+        text-align: left !important;
+    }
+
     .cta-title {
         font-size: 2rem;
+        text-align: left !important;
+    }
+
+    .cta-btn-wrapper {
+        justify-content: flex-start !important;
+    }
+
+    .cta-perks-row {
+        justify-content: flex-start !important;
+        text-align: left !important;
     }
 
     .hero-phone-card,
@@ -1373,8 +1379,42 @@ body {
         display: none;
     }
 
-    .embedded-stat-box {
+    .header-container {
         flex-direction: column;
-        text-align: center;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .nav-links {
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .nav-cta {
+        display: none;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        text-align: left !important;
+    }
+
+    .footer-brand,
+    .footer-nav,
+    .footer-meta {
+        text-align: left !important;
+        justify-content: flex-start !important;
+    }
+
+    .legal-title {
+        font-size: 2.1rem;
+        text-align: left !important;
+    }
+
+    .legal-section {
+        padding: 20px;
+        text-align: left !important;
     }
 }
