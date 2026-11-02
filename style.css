@@ -293,20 +293,6 @@ img, svg {
     justify-content: flex-start;
 }
 
-.hero-specs {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 0.84rem;
-    color: var(--text-muted);
-    justify-content: flex-start;
-    flex-wrap: wrap;
-}
-
-.spec-dot {
-    color: rgba(255, 255, 255, 0.2);
-}
-
 /* Hero Phone Mockup Visual */
 .hero-visual-wrapper {
     position: relative;
@@ -401,14 +387,6 @@ img, svg {
     min-width: 0;
 }
 
-.showdown-card-title {
-    font-size: 1.12rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 6px;
-    text-align: left;
-}
-
 .card-pill {
     display: inline-flex;
     align-items: center;
@@ -417,7 +395,7 @@ img, svg {
     border-radius: 6px;
     font-size: 0.76rem;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     width: fit-content;
     max-width: 100%;
 }
@@ -435,9 +413,9 @@ img, svg {
 }
 
 .showdown-body {
-    font-size: 0.9rem;
+    font-size: 0.96rem;
     color: var(--text-secondary);
-    line-height: 1.5;
+    line-height: 1.55;
     margin-bottom: 16px;
     text-align: left;
 }
@@ -474,24 +452,6 @@ img, svg {
 
 .showcase-img-top {
     object-position: top center;
-}
-
-.screenshot-caption {
-    padding: 10px 14px;
-    font-size: 0.76rem;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    background: rgba(10, 14, 26, 0.95);
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    text-align: left;
-}
-
-.screenshot-caption.danger-caption {
-    color: #fb7185;
-}
-
-.screenshot-caption.success-caption {
-    color: #34d399;
 }
 
 /* ==========================================================================
