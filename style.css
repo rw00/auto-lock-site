@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Auto Lock & Focus — Stylesheet
+   Auto Lock-in — Stylesheet
    Design: Midnight Obsidian, Curated Accents, Glassmorphism & High Aesthetics
    Rule: Text must NEVER be centered on mobile view (left-aligned everywhere)
    ========================================================================== */
@@ -31,6 +31,7 @@
     /* Typography */
     --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-serif: 'Instrument Serif', Georgia, serif;
+    --font-brand: 'Outfit', 'Plus Jakarta Sans', sans-serif;
 
     /* Radii & Shadows */
     --radius-sm: 8px;
@@ -81,6 +82,30 @@ img, svg {
     font-weight: 400;
     color: #a5b4fc;
     letter-spacing: -0.01em;
+}
+
+/* Brand Styling for Auto Lock-in */
+.brand-name {
+    font-family: var(--font-brand);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    background: linear-gradient(135deg, #ffffff 15%, #c7d2fe 65%, #a5b4fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline;
+}
+
+.brand-name-pill {
+    font-family: var(--font-brand);
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    color: #34d399;
+}
+
+.btn-brand-name {
+    font-family: var(--font-brand);
+    font-weight: 800;
+    letter-spacing: -0.015em;
 }
 
 /* Ambient Background Spheres (fixed & viewport-clamped to prevent horizontal overflow) */
@@ -300,6 +325,7 @@ img, svg {
     justify-content: center;
     align-items: center;
     min-width: 0;
+    perspective: 1200px;
 }
 
 .hero-phone-card,
@@ -309,9 +335,21 @@ img, svg {
     max-width: 290px;
     border-radius: 36px;
     padding: 8px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.03) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    box-shadow: 0 25px 65px rgba(0, 0, 0, 0.65);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.03) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 25px 65px rgba(0, 0, 0, 0.65), 0 0 35px rgba(99, 102, 241, 0.12);
+    transform-style: preserve-3d;
+}
+
+.phone-scroll-rotate {
+    will-change: transform;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    transition: transform 0.16s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.25s ease;
+}
+
+.phone-scroll-rotate:hover {
+    box-shadow: 0 30px 75px rgba(0, 0, 0, 0.75), 0 0 45px rgba(99, 102, 241, 0.22);
 }
 
 .phone-mockup-img {
@@ -533,6 +571,7 @@ img, svg {
     justify-content: center;
     align-items: center;
     min-width: 0;
+    perspective: 1200px;
 }
 
 /* ==========================================================================
@@ -632,9 +671,16 @@ img, svg {
 }
 
 .brand-logo {
-    font-weight: 700;
-    font-size: 0.95rem;
-    color: #ffffff;
+    font-family: var(--font-brand);
+    font-weight: 800;
+    font-size: 1.05rem;
+    letter-spacing: -0.025em;
+    background: linear-gradient(135deg, #ffffff 10%, #e0e7ff 60%, #c7d2fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .footer-privacy-tag {
@@ -823,6 +869,23 @@ img, svg {
 [data-scroll-animate].animated {
     opacity: 1;
     transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    [data-scroll-animate] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+    .load-fade-up {
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+    }
+    .phone-scroll-rotate {
+        transform: none !important;
+        transition: none !important;
+    }
 }
 
 @media (max-width: 1024px) {
